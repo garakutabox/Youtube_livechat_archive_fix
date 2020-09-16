@@ -1,0 +1,18 @@
+﻿{
+  "manifest_version":2,
+  "name":"Youtube 配信アーカイブのチャットシークを修正します",
+  "version":"1.0",
+  "content_scripts":[
+    {
+      "run_at": "document_end",
+      "all_frames": true,
+      "matches":[
+        "https://www.youtube.com/live_chat_replay*"
+      ],
+      "js":[
+        "content.js"
+      ]
+    }
+  ],
+  "web_accessible_resources": ["inject.js"]
+}
